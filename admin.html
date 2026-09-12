@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cloud,Store.id — Admin Panel</title>
+  <title>Cloudstore.id — Admin Panel</title>
   <link rel="stylesheet" href="admin-style.css">
 </head>
 <body>
@@ -11,7 +11,7 @@
     <!-- Sidebar -->
     <aside class="sidebar">
       <div class="sidebar-header">
-        <h1>☁ Cloud,Store.id</h1>
+        <h1>☁ Cloudstore.id</h1>
         <p>Admin Panel</p>
       </div>
       <nav class="sidebar-nav">
@@ -55,7 +55,7 @@
       <section id="users" class="tab-content">
         <h2>Kelola Akun Pengguna</h2>
         <div class="search-bar">
-          <input type="text" id="searchInput" placeholder="Cari nomor telepon atau nama...">
+          <input type="text" id="searchInput" placeholder="Cari nomor handphone atau nama...">
           <select id="filterStatus">
             <option value="">Semua Status</option>
             <option value="active">Aktif</option>
@@ -68,7 +68,7 @@
             <thead>
               <tr>
                 <th>No</th>
-                <th>Nomor Telepon</th>
+                <th>Nomor Handphone</th>
                 <th>Nama</th>
                 <th>Email</th>
                 <th>Status</th>
@@ -90,7 +90,7 @@
         <h2>Buat Akun Pengguna Baru</h2>
         <form id="createUserForm" class="create-form">
           <div class="form-group">
-            <label for="newPhone">Nomor Telepon *</label>
+            <label for="newPhone">Nomor Handphone *</label>
             <input type="tel" id="newPhone" placeholder="08xxxxxxxxxx" inputmode="numeric" required>
           </div>
 
@@ -105,8 +105,8 @@
           </div>
 
           <div class="form-group">
-            <label for="newPassword">Kata Laluan *</label>
-            <input type="password" id="newPassword" placeholder="Buat kata laluan" required>
+            <label for="newPassword">Kata Sandi *</label>
+            <input type="password" id="newPassword" placeholder="Buat kata sandi" required>
             <small>Min. 6 karakter, harus mengandung huruf dan angka</small>
           </div>
 
@@ -156,7 +156,7 @@
       <form id="editUserForm">
         <input type="hidden" id="editUserId">
         <div class="form-group">
-          <label for="editPhone">Nomor Telepon</label>
+          <label for="editPhone">Nomor Handphone</label>
           <input type="tel" id="editPhone" required>
         </div>
         <div class="form-group">
