@@ -23,8 +23,8 @@ form.addEventListener('submit', (event) => {
   if (user) {
     message.className = 'success';
     message.textContent = '✓ Login berhasil! Mengalihkan...';
+    localStorage.setItem('currentUser', JSON.stringify(user));
     setTimeout(() => {
-      // Redirect ke dashboard atau halaman utama
       window.location.href = 'dashboard.html';
     }, 1500);
   } else {
@@ -40,4 +40,4 @@ form.addEventListener('submit', (event) => {
 register.addEventListener('click', (event) => {
   event.preventDefault();
   window.location.href = 'register.html';
-})
+});
