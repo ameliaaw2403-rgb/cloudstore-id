@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cloud,Store.id — Admin Panel</title>
+  <link rel="stylesheet" href="admin-style.css">
+</head>
+<body>
+  <div class="admin-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <h1>☁ Cloud,Store.id</h1>
+        <p>Admin Panel</p>
+      </div>
+      <nav class="sidebar-nav">
+        <a href="#" class="nav-item active" data-tab="dashboard">📊 Dashboard</a>
+        <a href="#" class="nav-item" data-tab="users">👥 Kelola Akun</a>
+        <a href="#" class="nav-item" data-tab="create">➕ Buat Akun Baru</a>
+        <a href="#" class="nav-item" data-tab="stats">📈 Statistik</a>
+      </nav>
+      <div class="sidebar-footer">
+        <button id="logoutBtn" class="logout-btn">🚪 Keluar</button>
+        <a href="index.html" class="back-link">← Kembali ke Login</a>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Dashboard Tab -->
+      <section id="dashboard" class="tab-content active">
+        <h2>Dashboard</h2>
+        <div class="stats-grid">
+          <div class="stat-card">
+            <h3>Total Pengguna</h3>
+            <p class="stat-number" id="totalUsers">0</p>
+          </div>
+          <div class="stat-card">
+            <h3>Pengguna Aktif</h3>
+            <p class="stat-number" id="activeUsers">0</p>
+          </div>
+          <div class="stat-card">
+            <h3>Akun Terblokir</h3>
+            <p class="stat-number" id="blockedUsers">0</p>
+          </div>
+          <div class="stat-card">
+            <h3>Akun Hari Ini</h3>
+            <p class="stat-number" id="todayUsers">0</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Kelola Akun Tab -->
+      <section id="users" class="tab-content">
+        <h2>Kelola Akun Pengguna</h2>
+        <div class="search-bar">
+          <input type="text" id="searchInput" placeholder="Cari nomor telepon atau nama...">
+          <select id="filterStatus">
+            <option value="">Semua Status</option>
+            <option value="active">Aktif</option>
+            <option value="inactive">Tidak Aktif</option>
+            <option value="blocked">Terblokir</option>
+          </select>
+        </div>
+        <div class="table-container">
+          <table class="users-table">
+            <thead>
+              <tr>
+                <th>No</th>
+                <th>Nomor Telepon</th>
+                <th>Nama</th>
+                <th>Email</th>
+                <th>Status</th>
+                <th>Tgl Pendaftaran</th>
+                <th>Aksi</th>
+              </tr>
+            </thead>
+            <tbody id="usersTableBody">
+              <tr>
+                <td colspan="7" class="text-center">Tidak ada data pengguna</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Buat Akun Baru Tab -->
+      <section id="create" class="tab-content">
+        <h2>Buat Akun Pengguna Baru</h2>
+        <form id="createUserForm" class="create-form">
+          <div class="form-group">
+            <label for="newPhone">Nomor Telepon *</label>
+            <input type="tel" id="newPhone" placeholder="08xxxxxxxxxx" inputmode="numeric" required>
+          </div>
+
+          <div class="form-group">
+            <label for="newName">Nama Lengkap *</label>
+            <input type="text" id="newName" placeholder="Masukkan nama lengkap" required>
+          </div>
+
+          <div class="form-group">
+            <label for="newEmail">Email *</label>
+            <input type="email" id="newEmail" placeholder="email@example.com" required>
+          </div>
+
+          <div class="form-group">
+            <label for="newPassword">Kata Laluan *</label>
+            <input type="password" id="newPassword" placeholder="Buat kata laluan" required>
+            <small>Min. 6 karakter, harus mengandung huruf dan angka</small>
+          </div>
+
+          <div class="form-group">
+            <label for="newStatus">Status Akun *</label>
+            <select id="newStatus" required>
+              <option value="active">Aktif</option>
+              <option value="inactive">Tidak Aktif</option>
+            </select>
+          </div>
+
+          <button type="submit" class="btn-primary">Buat Akun</button>
+          <p id="createMessage" class="message"></p>
+        </form>
+      </section>
+
+      <!-- Statistik Tab -->
+      <section id="stats" class="tab-content">
+        <h2>Statistik Sistem</h2>
+        <div class="stats-detail">
+          <div class="stat-detail-card">
+            <h3>Total Login Hari Ini</h3>
+            <p class="big-number" id="totalLogins">0</p>
+          </div>
+          <div class="stat-detail-card">
+            <h3>Rata-rata Aktivitas</h3>
+            <p class="big-number" id="avgActivity">0%</p>
+          </div>
+          <div class="stat-detail-card">
+            <h3>Akun Baru Bulan Ini</h3>
+            <p class="big-number" id="newThisMonth">0</p>
+          </div>
+          <div class="stat-detail-card">
+            <h3>Waktu Server</h3>
+            <p class="big-number" id="serverTime">-</p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- Modal Edit User -->
+  <div id="editModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Edit Pengguna</h2>
+      <form id="editUserForm">
+        <input type="hidden" id="editUserId">
+        <div class="form-group">
+          <label for="editPhone">Nomor Telepon</label>
+          <input type="tel" id="editPhone" required>
+        </div>
+        <div class="form-group">
+          <label for="editName">Nama</label>
+          <input type="text" id="editName" required>
+        </div>
+        <div class="form-group">
+          <label for="editEmail">Email</label>
+          <input type="email" id="editEmail" required>
+        </div>
+        <div class="form-group">
+          <label for="editStatus">Status</label>
+          <select id="editStatus">
+            <option value="active">Aktif</option>
+            <option value="inactive">Tidak Aktif</option>
+            <option value="blocked">Terblokir</option>
+          </select>
+        </div>
+        <button type="submit" class="btn-primary">Simpan Perubahan</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="admin-script.js"></script>
+</body>
+</html>
