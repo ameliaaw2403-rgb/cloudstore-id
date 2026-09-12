@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cloudstore.id — Daftar Akun</title>
+  <link rel="stylesheet" href="register-style.css">
+</head>
+<body>
+  <main class="page">
+    <section class="brand-card">
+      <div class="brand-icon">☁</div>
+      <h1>Cloudstore.id</h1>
+      <p>Daftar untuk mulai mengerjakan tugas dan mendapatkan komisi.</p>
+    </section>
+
+    <section class="register-card">
+      <h2>Buat Akun Baru</h2>
+      <p class="subtitle">Isi semua data di bawah untuk membuat akun Anda.</p>
+
+      <form id="registerForm">
+        <div class="form-group">
+          <label for="fullname">Nama Lengkap *</label>
+          <input id="fullname" name="fullname" type="text"
+                 placeholder="Masukkan nama lengkap Anda" required>
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Nomor Handphone *</label>
+          <input id="phone" name="phone" type="tel" inputmode="numeric"
+                 placeholder="08xxxxxxxxxx" autocomplete="tel" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email *</label>
+          <input id="email" name="email" type="email"
+                 placeholder="email@example.com" autocomplete="email" required>
+        </div>
+
+        <div class="form-group">
+          <label for="password">Kata Sandi *</label>
+          <div class="password-wrap">
+            <input id="password" name="password" type="password"
+                   placeholder="Minimal 8 karakter" autocomplete="new-password" required>
+            <button type="button" id="togglePassword" aria-label="Tampilkan kata sandi">◉</button>
+          </div>
+          <small>Minimal 8 karakter, harus mengandung huruf besar, huruf kecil, dan angka</small>
+        </div>
+
+        <div class="form-group">
+          <label for="confirmPassword">Konfirmasi Kata Sandi *</label>
+          <div class="password-wrap">
+            <input id="confirmPassword" name="confirmPassword" type="password"
+                   placeholder="Ketik ulang kata sandi" autocomplete="new-password" required>
+            <button type="button" id="toggleConfirmPassword" aria-label="Tampilkan kata sandi">◉</button>
+          </div>
+        </div>
+
+        <div class="form-group checkbox">
+          <input id="terms" name="terms" type="checkbox" required>
+          <label for="terms">Saya setuju dengan syarat dan ketentuan penggunaan</label>
+        </div>
+
+        <button class="register-btn" type="submit">Daftar Akun</button>
+      </form>
+
+      <p class="login-link">Sudah punya akun? <a href="index.html">Masuk di sini</a></p>
+    </section>
+
+    <p class="terms">Dengan mendaftar, Anda menyetujui penggunaan akun Cloudstore.id.</p>
+    <p class="message" id="message" aria-live="polite"></p>
+  </main>
+
+  <script src="register-script.js"></script>
+</body>
+</html>
