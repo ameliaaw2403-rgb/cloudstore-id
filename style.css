@@ -7,6 +7,8 @@
   --bg-bottom: #334155;
   --primary: #6366f1;
   --primary-dark: #4f46e5;
+  --success: #10b981;
+  --danger: #ef4444;
   --card: #ffffff;
   --text: #20242d;
   --muted: #697386;
@@ -28,13 +30,13 @@ body {
 }
 
 .page {
-  width: min(100%, 460px);
+  width: min(100%, 520px);
   margin: 0 auto;
-  padding: 76px 20px 40px;
+  padding: 40px 20px;
 }
 
 .brand-card {
-  min-height: 218px;
+  min-height: 180px;
   border-radius: 30px;
   padding: 24px 28px 30px;
   text-align: center;
@@ -45,23 +47,23 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-bottom: 20px;
 }
 
-.brand-icon {
-  width: 68px;
-  height: 68px;
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
-  background: rgba(255,255,255,.96);
-  color: #6366f1;
-  font-size: 34px;
-  margin-bottom: 13px;
+.brand-logo-container {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 10px;
+}
+
+.brand-logo {
+  width: 100%;
+  height: 100%;
 }
 
 .brand-card h1 {
   margin: 0 0 5px;
-  font-size: 29px;
+  font-size: 27px;
   font-weight: 700;
   letter-spacing: -.6px;
 }
@@ -69,26 +71,26 @@ body {
 .brand-card p {
   max-width: 330px;
   margin: 0;
-  font-size: 16px;
+  font-size: 15px;
   line-height: 1.45;
   opacity: .96;
 }
 
 .login-card {
-  margin-top: 24px;
-  padding: 25px 25px 26px;
+  padding: 30px 28px;
   border-radius: 23px;
   background: var(--card);
   box-shadow: 0 16px 42px rgba(0,0,0,.15);
 }
 
 .login-card h2 {
-  margin: 0 0 7px;
+  margin: 0 0 10px;
   font-size: 26px;
+  font-weight: 700;
 }
 
 .subtitle {
-  margin: 0 0 27px;
+  margin: 0 0 25px;
   color: var(--muted);
   font-size: 14px;
   line-height: 1.5;
@@ -112,6 +114,7 @@ input {
   color: var(--text);
   font-size: 16px;
   transition: .2s ease;
+  margin-bottom: 20px;
 }
 
 input:focus {
@@ -121,6 +124,7 @@ input:focus {
 
 #password {
   padding-right: 52px;
+  margin-bottom: 0;
 }
 
 .password-wrap {

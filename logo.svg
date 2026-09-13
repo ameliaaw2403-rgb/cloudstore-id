@@ -1,0 +1,56 @@
+<svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background gradient definition -->
+  <defs>
+    <linearGradient id="cloudGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1E90FF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0047AB;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Cloud shape background -->
+  <path d="M 80 180 C 60 180 50 165 50 150 C 50 135 60 125 75 125 C 85 110 100 100 120 100 C 140 100 155 110 165 125 C 180 125 195 135 195 150 C 195 165 185 180 170 180 Z" fill="url(#cloudGradient)" />
+  
+  <path d="M 200 200 C 180 200 165 185 165 170 C 165 155 180 145 200 145 C 215 130 235 120 260 120 C 285 120 305 135 320 155 C 340 155 355 170 355 190 C 355 210 340 225 320 225 Z" fill="url(#cloudGradient)" />
+  
+  <!-- White cloud container -->
+  <ellipse cx="200" cy="220" rx="140" ry="100" fill="white" opacity="0.95" />
+  
+  <!-- Shopping cart -->
+  <g transform="translate(200, 200)">
+    <!-- Cart body -->
+    <path d="M -60 -20 L -50 40 C -50 50 -40 60 -30 60 L 80 60 C 90 60 100 50 100 40 L 110 -20" 
+          stroke="#1E90FF" stroke-width="8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    
+    <!-- Cart handle -->
+    <path d="M -60 -20 Q -70 -50 0 -60 Q 70 -50 110 -20" 
+          stroke="white" stroke-width="10" fill="none" stroke-linecap="round"/>
+    
+    <!-- Cart wheels -->
+    <circle cx="-20" cy="70" r="8" fill="white"/>
+    <circle cx="70" cy="70" r="8" fill="white"/>
+    
+    <!-- Stars -->
+    <g fill="#FFD700">
+      <!-- Star 1 -->
+      <path d="M -35 0 L -30 15 L -15 15 L -25 25 L -20 40 L -35 30 L -50 40 L -45 25 L -55 15 L -40 15 Z" />
+      <!-- Star 2 -->
+      <path d="M -10 0 L -5 15 L 10 15 L 0 25 L 5 40 L -10 30 L -25 40 L -20 25 L -30 15 L -15 15 Z" />
+      <!-- Star 3 -->
+      <path d="M 15 0 L 20 15 L 35 15 L 25 25 L 30 40 L 15 30 L 0 40 L 5 25 L -5 15 L 10 15 Z" />
+      <!-- Star 4 -->
+      <path d="M 40 0 L 45 15 L 60 15 L 50 25 L 55 40 L 40 30 L 25 40 L 30 25 L 20 15 L 35 15 Z" />
+      <!-- Star 5 -->
+      <path d="M 65 0 L 70 15 L 85 15 L 75 25 L 80 40 L 65 30 L 50 40 L 55 25 L 45 15 L 60 15 Z" />
+    </g>
+    
+    <!-- Shine effect -->
+    <ellipse cx="-20" cy="-30" rx="30" ry="15" fill="white" opacity="0.3"/>
+  </g>
+  
+  <!-- Sparkles -->
+  <g fill="#FFD700">
+    <rect x="320" y="140" width="6" height="20" rx="3" />
+    <rect x="310" y="155" width="26" height="6" rx="3" transform="rotate(-45 323 158)" />
+    <rect x="340" y="155" width="26" height="6" rx="3" transform="rotate(45 353 158)" />
+  </g>
+</svg>

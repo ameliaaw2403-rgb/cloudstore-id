@@ -3,14 +3,43 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cloudstore.id — Login</title>
+  <title>Cloud Store — Login</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <main class="page">
     <section class="brand-card">
-      <div class="brand-icon">☁</div>
-      <h1>Cloudstore.id</h1>
+      <div class="brand-logo-container">
+        <svg class="brand-logo" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="cloudGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" style="stop-color:#1E90FF;stop-opacity:1" />
+              <stop offset="100%" style="stop-color:#0047AB;stop-opacity:1" />
+            </linearGradient>
+          </defs>
+          <ellipse cx="200" cy="200" rx="150" ry="120" fill="url(#cloudGradient)" />
+          <g transform="translate(200, 200)">
+            <path d="M -60 -20 L -50 40 C -50 50 -40 60 -30 60 L 80 60 C 90 60 100 50 100 40 L 110 -20" stroke="white" stroke-width="8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M -60 -20 Q -70 -50 0 -60 Q 70 -50 110 -20" stroke="white" stroke-width="10" fill="none" stroke-linecap="round"/>
+            <circle cx="-20" cy="70" r="8" fill="white"/>
+            <circle cx="70" cy="70" r="8" fill="white"/>
+            <g fill="#FFD700">
+              <path d="M -35 0 L -30 15 L -15 15 L -25 25 L -20 40 L -35 30 L -50 40 L -45 25 L -55 15 L -40 15 Z" />
+              <path d="M -10 0 L -5 15 L 10 15 L 0 25 L 5 40 L -10 30 L -25 40 L -20 25 L -30 15 L -15 15 Z" />
+              <path d="M 15 0 L 20 15 L 35 15 L 25 25 L 30 40 L 15 30 L 0 40 L 5 25 L -5 15 L 10 15 Z" />
+              <path d="M 40 0 L 45 15 L 60 15 L 50 25 L 55 40 L 40 30 L 25 40 L 30 25 L 20 15 L 35 15 Z" />
+              <path d="M 65 0 L 70 15 L 85 15 L 75 25 L 80 40 L 65 30 L 50 40 L 55 25 L 45 15 L 60 15 Z" />
+            </g>
+            <ellipse cx="-20" cy="-30" rx="30" ry="15" fill="white" opacity="0.3"/>
+          </g>
+          <g fill="#FFD700">
+            <rect x="320" y="140" width="6" height="20" rx="3" />
+            <rect x="310" y="155" width="26" height="6" rx="3" transform="rotate(-45 323 158)" />
+            <rect x="340" y="155" width="26" height="6" rx="3" transform="rotate(45 353 158)" />
+          </g>
+        </svg>
+      </div>
+      <h1>Cloud Store</h1>
       <p>Masuk untuk mulai menerima tugas dan komisi harian.</p>
     </section>
 
@@ -36,7 +65,7 @@
       <a class="register" href="#" id="registerLink">Daftar sekarang</a>
     </section>
 
-    <p class="terms">Dengan masuk, Anda menyetujuhi penggunaan akun Cloudstore.id.</p>
+    <p class="terms">Dengan masuk, Anda menyetujuhi penggunaan akun Cloud Store.</p>
     <p class="demo-note" id="message" aria-live="polite"></p>
   </main>
 
