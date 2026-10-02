@@ -3,17 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cloud Store — Dashboard</title>
+  <title>Cloud Store — Marketplace</title>
   <link rel="icon" href="logo.svg" type="image/svg+xml">
   <link rel="stylesheet" href="dashboard-style.css">
 </head>
 <body>
   <div class="dashboard-container">
-    <!-- Header -->
     <header class="header">
       <div class="header-logo-container">
         <img class="header-logo" src="logo.svg" alt="Cloud Store logo">
-        <span>Cloud Store</span>
       </div>
       <div class="header-content">
         <div class="search-bar">
@@ -24,9 +22,7 @@
       </div>
     </header>
 
-    <!-- Main Content -->
     <main class="main-content">
-      <!-- Info Banner -->
       <section class="info-banner">
         <div class="banner-header">
           <h3>Marketplace Indonesia</h3>
@@ -36,13 +32,11 @@
         </div>
       </section>
 
-      <!-- Tab Navigation -->
       <div class="tab-nav">
         <button class="tab-btn active" data-tab="semua">Semua produk</button>
         <button class="tab-btn" data-tab="promo">Produk promo</button>
       </div>
 
-      <!-- Promo Banner -->
       <section class="promo-banner">
         <div class="promo-text">
           <h2>8% - 10%</h2>
@@ -50,16 +44,12 @@
         </div>
       </section>
 
-      <!-- Products Grid -->
       <section class="products-section">
         <h3 class="section-title">Sistem ambil pesanan</h3>
-        <div class="products-grid" id="productsGrid">
-          <!-- Products will be loaded here -->
-        </div>
+        <div class="products-grid" id="productsGrid"></div>
       </section>
     </main>
 
-    <!-- Bottom Navigation -->
     <nav class="bottom-nav">
       <a href="#" class="nav-item active" data-page="dashboard">
         <span class="nav-icon">🏠</span>
@@ -80,7 +70,6 @@
     </nav>
   </div>
 
-  <!-- Product Detail Modal -->
   <div id="productModal" class="modal">
     <div class="modal-content">
       <span class="close-btn">&times;</span>
@@ -103,19 +92,15 @@
     </div>
   </div>
 
-  <!-- Gift Selection Modal -->
   <div id="giftModal" class="modal">
     <div class="modal-content gift-modal">
       <span class="close-btn">&times;</span>
       <h2>Pilih Hadiah</h2>
-      <div class="gifts-grid" id="giftsGrid">
-        <!-- Gifts will be loaded here -->
-      </div>
+      <div class="gifts-grid" id="giftsGrid"></div>
       <button id="confirmGiftBtn" class="confirm-btn">Konfirmasi Pilihan</button>
     </div>
   </div>
 
-  <!-- Login Check -->
   <script src="dashboard-script.js"></script>
 </body>
 </html>
