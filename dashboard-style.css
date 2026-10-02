@@ -29,7 +29,6 @@ html, body {
   padding-bottom: 80px;
 }
 
-/* Header */
 .header {
   background: linear-gradient(135deg, #818cf8, #4f46e5);
   padding: 15px;
@@ -37,6 +36,22 @@ html, body {
   top: 0;
   z-index: 100;
   box-shadow: 0 2px 8px rgba(0,0,0,.1);
+}
+
+.header-logo-container {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-logo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
 }
 
 .header-content {
@@ -85,7 +100,6 @@ html, body {
   justify-content: center;
 }
 
-/* Main Content */
 .main-content {
   flex: 1;
   max-width: 1200px;
@@ -94,7 +108,6 @@ html, body {
   padding: 0 15px;
 }
 
-/* Info Banner */
 .info-banner {
   background: white;
   border-radius: 12px;
@@ -124,7 +137,6 @@ html, body {
   line-height: 1.4;
 }
 
-/* Tab Navigation */
 .tab-nav {
   display: flex;
   gap: 10px;
@@ -156,7 +168,6 @@ html, body {
   color: var(--text);
 }
 
-/* Promo Banner */
 .promo-banner {
   background: linear-gradient(135deg, #fff3cd, #ffe699);
   border-radius: 12px;
@@ -180,7 +191,6 @@ html, body {
   line-height: 1.4;
 }
 
-/* Products Section */
 .products-section {
   margin: 20px 0;
 }
@@ -301,7 +311,6 @@ html, body {
   background: #059669;
 }
 
-/* Bottom Navigation */
 .bottom-nav {
   position: fixed;
   bottom: 0;
@@ -340,7 +349,6 @@ html, body {
   font-weight: 600;
 }
 
-/* Modal */
 .modal {
   display: none;
   position: fixed;
@@ -473,7 +481,6 @@ html, body {
   background: #059669;
 }
 
-/* Gift Modal */
 .gift-modal {
   max-width: 600px;
   margin: 0 auto;
@@ -535,8 +542,12 @@ html, body {
   background: #059669;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
+  .header-logo-container {
+    width: 90px;
+    height: 90px;
+  }
+
   .products-grid {
     grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
     gap: 10px;
